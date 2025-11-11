@@ -65,7 +65,7 @@ export async function GET() {
             status: liveData.fixture.status.short,
             homeScore: liveData.goals.home,
             awayScore: liveData.goals.away,
-            elapsed: liveData.fixture.status.elapsed || null,
+            elapsed: (liveData.fixture.status as any).elapsed || null,
           });
         }
       } catch (error) {
